@@ -2,15 +2,36 @@
 <html>
 <head>
     <title>Effects</title>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+    <style>
+        #box {
+            width:100px;
+            height:100px;
+            background:red;
+            position:relative;
+        }
+    </style>
 </head>
 <body>
 
+<h2>jQuery Effects + Lottie</h2>
+
 <button id="hide">Hide</button>
 <button id="show">Show</button>
-<button id="animate">Animate</button>
+<button id="toggle">Toggle</button>
+<button id="fade">Fade</button>
+<button id="slide">Slide</button>
+<button id="animate">Animate Box</button>
 
-<div id="box" style="width:100px;height:100px;background:red;"></div>
+<div id="box"></div>
+
+<div id="animation" style="width:300px;height:300px;"></div>
+
+<button id="play">Play</button>
+<button id="pause">Pause</button>
 
 <script>
 
@@ -22,13 +43,41 @@ $("#show").click(function(){
     $("#box").show();
 });
 
+$("#toggle").click(function(){
+    $("#box").toggle();
+});
+
+$("#fade").click(function(){
+    $("#box").fadeToggle();
+});
+
+$("#slide").click(function(){
+    $("#box").slideToggle();
+});
+
 $("#animate").click(function(){
     $("#box").animate({
-        left: '250px',
+        left: '200px',
         opacity: 0.5,
         height: '150px',
         width: '150px'
     });
+});
+
+var animation = lottie.loadAnimation({
+    container: document.getElementById('animation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'animation.json'
+});
+
+$("#play").click(function(){
+    animation.play();
+});
+
+$("#pause").click(function(){
+    animation.pause();
 });
 
 </script>
