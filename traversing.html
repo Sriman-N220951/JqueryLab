@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traversing</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<div id="parent">
+    <p>Child 1</p>
+    <p>Child 2</p>
+</div>
+
+<button id="btn">Traverse</button>
+
+<script>
+
+$("#btn").click(function(){
+
+    $("#parent").children().css("color","red");
+    $("#parent").find("p").css("background","yellow");
+    $("#parent").children().first().css("font-size","25px");
+
+});
+
+</script>
+
+</body>
+</html>

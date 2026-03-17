@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Effects</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="animate">Animate</button>
+
+<div id="box" style="width:100px;height:100px;background:red;"></div>
+
+<script>
+
+$("#hide").click(function(){
+    $("#box").hide();
+});
+
+$("#show").click(function(){
+    $("#box").show();
+});
+
+$("#animate").click(function(){
+    $("#box").animate({
+        left: '250px',
+        opacity: 0.5,
+        height: '150px',
+        width: '150px'
+    });
+});
+
+</script>
+
+</body>
+</html>

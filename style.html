@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .highlight { color: red; }
+    </style>
+</head>
+<body>
+
+<p id="text">Hello World</p>
+<button id="btn">Change Style</button>
+
+<script>
+$("#btn").click(function(){
+
+    $("#text").css("font-size","30px");
+    $("#text").addClass("highlight");
+
+    if($("#text").hasClass("highlight")){
+        console.log("Class exists");
+    }
+
+});
+</script>
+
+</body>
+</html>

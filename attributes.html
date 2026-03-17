@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attributes</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<img id="img" src="img1.jpg" width="200">
+<br><br>
+
+<input type="text" id="inputBox" placeholder="Enter name">
+<br><br>
+
+<input type="checkbox" id="check"> Accept
+<br><br>
+
+<button id="change">Change Image</button>
+<button id="disable">Disable Checkbox</button>
+<button id="getVal">Get Value</button>
+
+<script>
+$("#change").click(function(){
+    $("#img").attr("src","img2.jpg");
+});
+
+$("#disable").click(function(){
+    $("#check").prop("disabled", true);
+});
+
+$("#getVal").click(function(){
+    alert($("#inputBox").val());
+});
+</script>
+
+</body>
+</html>

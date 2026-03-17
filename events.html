@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<button id="clickBtn">Click Me</button>
+<input type="text" id="input">
+
+<script>
+
+$("#clickBtn").click(function(){
+    alert("Clicked!");
+});
+
+$("#clickBtn").dblclick(function(){
+    alert("Double Click!");
+});
+
+$("#input").keypress(function(){
+    console.log("Key Pressed");
+});
+
+$("#input").focus(function(){
+    $(this).css("background","yellow");
+});
+
+$("#input").blur(function(){
+    $(this).css("background","white");
+});
+
+</script>
+
+</body>
+</html>
